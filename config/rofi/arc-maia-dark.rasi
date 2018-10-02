@@ -37,6 +37,7 @@
         spacing: 2;
         separatorcolor: #01EBBE;
 
+
         /* Have no idea what are these for, I just included them because every reference theme has them ¯\_(ツ)_/¯ */
         red:                         rgba ( 220, 50, 47, 100 % );
         blue:                        rgba ( 38, 139, 210, 100 % );
