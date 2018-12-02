@@ -5,14 +5,14 @@
 ######################
 update_interval 10
 total_run_times 0
-net_avg_samples 1
-cpu_avg_samples 2
+#net_avg_samples 1
+#cpu_avg_samples 2
 
 imlib_cache_size 0
 double_buffer yes
 no_buffers yes
 
-format_human_readable
+#format_human_readable
 
 #####################
 # - Text settings - #
@@ -20,7 +20,7 @@ format_human_readable
 use_xft yes
 xftfont Droid Sans:size=8
 override_utf8_locale yes
-text_buffer_size 2048
+text_buffer_size 1024
 
 #############################
 # - Window specifications - #
@@ -32,22 +32,24 @@ own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 
 alignment middle_right
-gap_y -200
-gap_x 7
+gap_y -190
+gap_x 8
 border_inner_margin 5
 
-minimum_size 260 250
-#maximum_width 400
-#maximum_height 460
+# minimum_size 260 300
+minimum_width 620
+minimum_height 355
+maximum_width 620
+maximum_height 355
 
-default_bar_size 92 6
+#default_bar_size 92 6
 
 #########################
 # - Graphics settings - #
 #########################
 draw_shades no
-default_shade_color 000000
-default_color FFFFFF
+#default_shade_color 000000
+#default_color FFFFFF
 color0 white
 color1 EAEAEA
 color2 01EBBE
@@ -59,7 +61,7 @@ own_window_argb_visual no
 own_window_colour 000000
 TEXT
 ${color2}Manjaro Stable Updates ${hr 1}
-${color0}${rss https://forum.manjaro.org/c/announcements/stable-updates.rss 720 item_titles 1}
+${color0}${rss https://forum.manjaro.org/c/announcements/stable-updates.rss 720 item_titles 2}
 
 ${color4}TorrentFreak ${hr 1}
 ${color0}${rss https://feeds.feedburner.com/Torrentfreak 60 item_titles 3}
@@ -67,7 +69,8 @@ ${color0}${rss https://feeds.feedburner.com/Torrentfreak 60 item_titles 3}
 ${color2}Gaming On Linux ${hr 1}
 ${color0}${rss https://www.gamingonlinux.com/article_rss.php 60 item_titles 5}
 
-
+${color4}Darknet Diaries ${hr 1}
+${color0}${rss https://feeds.megaphone.fm/darknetdiaries 120 item_titles 2}
 
 
 
