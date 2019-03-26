@@ -29,7 +29,7 @@ out_to_stderr no
 extra_newline no
 
 own_window yes
-own_window_type override # To make widow shadows disappear
+own_window_type desktop # To make widow shadows disappear
 own_window_transparent yes
 own_window_colour 000000
 own_window_argb_visual no
