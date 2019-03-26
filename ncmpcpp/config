@@ -12,7 +12,7 @@ visualizer_look = "▁▁"
 ### Songs ###
 now_playing_prefix = "$b>>>"
 now_playing_suffix = "$/b"
-song_columns_list_format = "(2)[]{} (15)[yellow]{a} (30)[white]{t} (46)[cyan]{b} (4)[magenta]{l}"
+song_columns_list_format = "(2)[]{} (15)[yellow]{a} (46)[white]{t} (30)[cyan]{b} (4)[magenta]{l}"
 
 ### Colors ###
 header_window_color = "white"
