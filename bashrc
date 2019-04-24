@@ -154,3 +154,11 @@ fi
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 alias papefetch="neofetch --backend w3m"
 alias lah="ls -ahl"
+alias pukeskull="sh /home/jon/Documents/gits/Color-Scripts/color-scripts/pukeskull"
+alias dAt="sh /home/jon/Documents/random_scripts/drawAterminal.sh"
+alias lsdir="ls -1p | grep / | lolcat"
+alias balena-etcher="/opt/balenaEtcher/balena-etcher-electron %U"
+alias hexedit="hexedit --color"
+
+# For kitty terminal completion
+source <(kitty + complete setup bash)
