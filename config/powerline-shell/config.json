@@ -10,5 +10,13 @@
     "jobs",
     "root"
   ],
+  "cwd": {
+      "max_depth": 4,
+      "max-dir-size": 16,
+      "full_cwd": true
+  },
+  "vcs": {
+      "show_symbol": true
+  },
   "theme": "/home/jon/.config/powerline-shell/themes/mytheme.py"
 }
