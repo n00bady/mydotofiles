@@ -1,0 +1,45 @@
+#-- [[Simple rss widget by n00bady]]
+
+conky.config = {
+    update_interval=50,
+    total_run_times=0,
+    use_xft=true,
+    font="Droid Sans:size=10",
+    text_buffer_size=1024,
+    own_window=true,
+    own_window_class="Conky",
+    own_window_type="normal",
+    own_window_transparent no
+    #-- [[own_window_hints="undecorated, below, sticky, skip_taskbar, skip_pager",]]
+    own_window_argb_visual no
+    own_window_argb_value 0
+    alignment middle_right
+    gap_x -200
+    gap_y 5
+    border_inner_margin=5,
+    minimum_height=260,
+    minimum_width=250,
+    maximum_height=525,
+    maximum_width=250,
+    draw_shades=false,
+    color0="white",
+    color1="EAEAEA",
+    color2="01EBBE",
+    color3="grey",
+    color4="FF4796"
+};
+
+conky.text=[[
+    ${color2}Manjaro Stable Updates ${hr 1}
+    ${color0}${rss https://forum.manjaro.org/c/announcements/stable-updates.rss 720 item_titles 2}
+    
+    ${color4}TorrentFreak ${hr 1}
+    ${color0}${rss https://feeds.feedburner.com/Torrentfreak 60 item_titles 3}
+
+    ${color2}Gaming On Linux ${hr 1}
+    ${color0}${rss https://www.gamingonlinux.com/article_rss.php 60 item_titles 5}
+
+]]
+
+
+

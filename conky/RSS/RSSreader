@@ -58,8 +58,9 @@ color3 grey
 color4 FF4796
 
 own_window_argb_value 0
-own_window_argb_visual no
+own_window_argb_visual yes
 own_window_colour 000000
+minimum_size 0 0
 TEXT
 ${color2}Manjaro Stable Updates ${hr 1}
 ${color0}${rss https://forum.manjaro.org/c/announcements/stable-updates.rss 720 item_titles 2}
@@ -72,6 +73,5 @@ ${color0}${rss https://www.gamingonlinux.com/article_rss.php 60 item_titles 5}
 
 ${color4}Darknet Diaries ${hr 1}
 ${color0}${rss https://feeds.megaphone.fm/darknetdiaries 120 item_titles 2}
-
 
 
