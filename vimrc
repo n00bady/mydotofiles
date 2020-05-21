@@ -18,6 +18,8 @@ Plugin 'davidhalter/jedi-vim'
 "Plugin 'JamshedVesuna/vim-markdown-preview'
 "Bundle 'vim-ruby/vim-ruby'
 Plugin 'preservim/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 " All of your Plugins must be added before the following line
@@ -71,6 +73,9 @@ set backspace=indent,eol,start	" #Backspace behaviour
 
 set omnifunc=syntaxcomplete#Complete
 
+"airline stuff
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'deus'
 
 " NERDTree Stuff
 "autocmd StdinReadPre * let s:std_in=1
