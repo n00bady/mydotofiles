@@ -45,13 +45,14 @@ filetype plugin indent on    " required
 colo deus
 " Nice full higlighting of the current line :)
 set cursorline
-highlight Cursorline cterm=NONE ctermbg=235 ctermfg=NONE guibg=darkgray guifg=NONE
-highlight CursorlineNR cterm=NONE ctermbg=235 ctermfg=NONE guibg=darkgray guifg=NONE
+" The below two have to get added into the colorshcemes file to work properly
+"highlight Cursorline cterm=NONE ctermbg=237 ctermfg=NONE guibg=darkgray guifg=NONE
+"highlight CursorlineNR cterm=NONE ctermbg=237 ctermfg=NONE guibg=darkgray guifg=NONE
 
 set number		" #To show line numbers
 set textwidth=120	" #Line wrap
 set linebreak		" #To breaklines at word
-set showbreak=+++	" #Prefix for the warp-broken line
+set showbreak=+++++	" #Prefix for the warp-broken line
 
 set showmatch		" #To highlight the matching brace
 set hlsearch		" #To highlight all the search results
