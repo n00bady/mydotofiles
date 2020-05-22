@@ -40,6 +40,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 " ----------------------------------------------------
 
+" Colorscheme   append hi Normal guibg=NONE ctermbg=NONE to the /usr/share/vim/vim82/color/<colorscheme>.vim to get a
+" transparent terminal background
+colo deus
 " Nice full higlighting of the current line :)
 set cursorline
 highlight Cursorline cterm=NONE ctermbg=235 ctermfg=NONE guibg=darkgray guifg=NONE
