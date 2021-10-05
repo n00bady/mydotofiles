@@ -20,6 +20,8 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'preservim/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'rust-lang/rust.vim'
+Plugin 'dense-analysis/ale'
 
 " ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 " All of your Plugins must be added before the following line
@@ -40,6 +42,12 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 " ----------------------------------------------------
 
+" Keyboard shortcuts for moving between splits
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+
 " Colorscheme   append hi Normal guibg=NONE ctermbg=NONE to the /usr/share/vim/vim82/color/<colorscheme>.vim to get a
 " transparent terminal background
 colo deus
@@ -50,9 +58,9 @@ set cursorline
 "highlight CursorlineNR cterm=NONE ctermbg=237 ctermfg=NONE guibg=darkgray guifg=NONE
 
 set number		" #To show line numbers
-set textwidth=120	" #Line wrap
+set textwidth=128	" #Line wrap
 set linebreak		" #To breaklines at word
-set showbreak=+++++	" #Prefix for the warp-broken line
+set showbreak=+++	" #Prefix for the warp-broken line
 
 set showmatch		" #To highlight the matching brace
 set hlsearch		" #To highlight all the search results
@@ -71,11 +79,13 @@ set smartindent		" #Enable smart indent
 set smarttab		" #Enable smart tabs
 
 set ruler		" #Show row & column info
-set undolevels=1000	" #Number of untos
+set undolevels=100	" #Number of untos
 
 set backspace=indent,eol,start	" #Backspace behaviour
 
 set omnifunc=syntaxcomplete#Complete
+
+set lazyredraw
 
 "airline stuff
 let g:airline_powerline_fonts = 1
@@ -93,3 +103,6 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+
+" ale options
+let g:ale_completion_enabled = 1
