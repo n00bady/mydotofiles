@@ -153,10 +153,10 @@ ex ()
 # My own aliases
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 alias papefetch="neofetch --backend w3m"
-alias lah="exa -al"
+alias lah="exa -abghHliS --git"
 alias pukeskull="sh /home/jon/Documents/gits/Color-Scripts/color-scripts/pukeskull"
 alias dAt="sh /home/jon/Documents/random_scripts/drawAterminal.sh"
-alias lsdir="ls -1p | grep / | lolcat"
+alias lsdir="exa -1D --icons | lolcat"
 alias balena-etcher="/opt/balenaEtcher/balena-etcher-electron %U"
 alias hexedit="hexedit --color"
 alias oggart="/home/jon/Documents/random_scripts/ogg-cover-art.sh"
@@ -165,7 +165,7 @@ alias kiff="kitty +kitten diff"
 alias cd1="cd /run/media/jon/SSD1/"
 alias cd2="cd /run/media/jon/HDD1/"
 alias cdjc="cd /run/media/jon/SSD1/jc141/"
-alias ls="exa"
+alias ls="exa --icons"
 
 # My own functions :)
 allsprktv () {
