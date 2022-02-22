@@ -34,14 +34,14 @@ colors() {
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
 # Change the window title of X terminals
-case ${TERM} in
-	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
-		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
-		;;
-	screen*)
-		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
-		;;
-esac
+#case ${TERM} in
+#	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
+#		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
+#		;;
+#	screen*)
+#		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
+#		;;
+#esac
 
 use_color=true
 
@@ -50,43 +50,43 @@ use_color=true
 # instead of using /etc/DIR_COLORS.  Try to use the external file
 # first to take advantage of user additions.  Use internal bash
 # globbing instead of external grep binary.
-safe_term=${TERM//[^[:alnum:]]/?}   # sanitize TERM
-match_lhs=""
-[[ -f ~/.dir_colors   ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
-[[ -f /etc/DIR_COLORS ]] && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
-[[ -z ${match_lhs}    ]] \
-	&& type -P dircolors >/dev/null \
-	&& match_lhs=$(dircolors --print-database)
-[[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
+#safe_term=${TERM//[^[:alnum:]]/?}   # sanitize TERM
+#match_lhs=""
+#[[ -f ~/.dir_colors   ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
+#[[ -f /etc/DIR_COLORS ]] && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
+#[[ -z ${match_lhs}    ]] \
+#	&& type -P dircolors >/dev/null \
+#	&& match_lhs=$(dircolors --print-database)
+#[[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
 
-if ${use_color} ; then
-	# Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
-	if type -P dircolors >/dev/null ; then
-		if [[ -f ~/.dir_colors ]] ; then
-			eval $(dircolors -b ~/.dir_colors)
-		elif [[ -f /etc/DIR_COLORS ]] ; then
-			eval $(dircolors -b /etc/DIR_COLORS)
-		fi
-	fi
-
-	if [[ ${EUID} == 0 ]] ; then
-		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
-	else
-		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
-	fi
-
-	alias ls='ls --color=auto'
-	alias grep='grep --colour=auto'
-	alias egrep='egrep --colour=auto'
-	alias fgrep='fgrep --colour=auto'
-else
-	if [[ ${EUID} == 0 ]] ; then
-		# show root@ when we don't have colors
-		PS1='\u@\h \W \$ '
-	else
-		PS1='\u@\h \w \$ '
-	fi
-fi
+#if ${use_color} ; then
+#	# Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
+#	if type -P dircolors >/dev/null ; then
+#		if [[ -f ~/.dir_colors ]] ; then
+#			eval $(dircolors -b ~/.dir_colors)
+#		elif [[ -f /etc/DIR_COLORS ]] ; then
+#			eval $(dircolors -b /etc/DIR_COLORS)
+#		fi
+#	fi
+#
+#	if [[ ${EUID} == 0 ]] ; then
+#		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
+#	else
+#		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+#	fi
+#
+alias ls='ls --color=auto'
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
+#else
+#	if [[ ${EUID} == 0 ]] ; then
+#		# show root@ when we don't have colors
+#		PS1='\u@\h \W \$ '
+#	else
+#		PS1='\u@\h \w \$ '
+#	fi
+#fi
 
 unset use_color safe_term match_lhs sh
 
@@ -139,26 +139,63 @@ ex ()
 }
 
 # better yaourt colors
-export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
+#export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
 # Powerline-shell
-function _update_ps1() {
-    PS1=$(powerline-shell $?)
-}
+# function _update_ps1() {
+#    PS1=$(powerline-shell $?)
+#}
 
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+#if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+#fi
 
 # My own aliases
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 alias papefetch="neofetch --backend w3m"
-alias lah="ls -ahl"
+alias lah="exa -al"
 alias pukeskull="sh /home/jon/Documents/gits/Color-Scripts/color-scripts/pukeskull"
 alias dAt="sh /home/jon/Documents/random_scripts/drawAterminal.sh"
 alias lsdir="ls -1p | grep / | lolcat"
 alias balena-etcher="/opt/balenaEtcher/balena-etcher-electron %U"
 alias hexedit="hexedit --color"
+alias oggart="/home/jon/Documents/random_scripts/ogg-cover-art.sh"
+alias ytdl="/home/jon/Documents/random_scripts/ytdl.sh"
+alias kiff="kitty +kitten diff"
+alias cd1="cd /run/media/jon/SSD1/"
+alias cd2="cd /run/media/jon/HDD1/"
+alias cdjc="cd /run/media/jon/SSD1/jc141/"
+alias ls="exa"
 
+# My own functions :)
+allsprktv () {
+    channel=$1
+    mpv https://allsprk.tv/m3u8/$channel
+}
+ipinfo () {
+    ip=$1
+    curl ipinfo.io/$1
+    echo -e "\n"
+}
 # For kitty terminal completion
 source <(kitty + complete setup bash)
+
+#PATHS
+export PATH=$PATH:/home/jon/.gem/ruby/2.7.0/bin
+export PATH=$PATH:/usr/bin/vendor_perl
+
+# added by travis gem
+[ -f /home/jon/.travis/travis.sh ] && source /home/jon/.travis/travis.sh
+
+# Install Ryby Gems to ~/.gems
+export GEM_HOME="$HOME/.gems"
+export PATH="$HOME/.gems/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Starship
+eval "$(starship init bash)"
+
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION
