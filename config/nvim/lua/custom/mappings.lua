@@ -1,16 +1,13 @@
--- MAPPINGS
 local M = {}
 
-M.telescope = {
-  n = {
-    ["<leader>cc"] = { "<cmd> Telescope <CR>", "Toggle Telescope." },
-  }
-}
+M.general {
 
-M.general = {
   n = {
-    ["<leader>Q"] = { "<cmd> q <CR>", "Quit" },
-  }
+    ["<leader>cc"] = { "<cmd> Telescope <CR>", " Open Telescope" },
+    ["<leader>q"] = { "<cmd> q <CR>", "Quick Quit"},
+    ["C-a"] = { "<ESC>^", "Go to the first character in the line" },
+  },
+
 }
 
 return M
