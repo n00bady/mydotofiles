@@ -1,17 +1,19 @@
-local colors = require("colors").get()
-local ui = require("core.utils").load_config().ui
+-- To find any highlight groups: "<cmd> Telescope highlights"
+-- Each highlight group can take a table with variables fg, bg, bold, italic, etc
+-- base30 variable names can also be used as colors
 
-local fg = require("core.utils").fg
-local fg_bg = require("core.utils").fg_bg
-local bg = require("core.utils").bg
+local M = {}
 
--- enable highlighting for cursorline
-vim.cmd("hi cursorline ctermbg=242 guibg=#3b4261")
+---@type Base46HLGroupsList
+M.override = {
+  Comment = {
+    italic = true,
+  },
+}
 
--- change comments colors
-if ui.italic_comments then
-  fg("Comment", colors.grey .. " gui=italic")
-else 
-  fg("Comment", "#737373")
-end
+---@type HLTable
+M.add = {
+  NvimTreeOpenedFolderName = { fg = "green", bold = true },
+}
 
+return M
