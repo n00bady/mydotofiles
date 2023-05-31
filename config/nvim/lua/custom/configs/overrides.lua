@@ -62,6 +62,14 @@ M.nvimtree = {
       show = {
         git = true,
       },
+
+      glyphs = {
+        folder = {
+          default = "",
+          empty_open = "",
+          open = "",
+        },
+      },
     },
   },
 }
