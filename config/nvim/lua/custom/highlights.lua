@@ -9,11 +9,18 @@ M.override = {
   Comment = {
     italic = true,
   },
+  NvDashAscii = {
+    bg = "none",
+    fg = "blue",
+  },
+  -- NvDashButtons = {
+  -- },
 }
 
 ---@type HLTable
 M.add = {
   NvimTreeOpenedFolderName = { fg = "green", bold = true },
+  CursorLine = { bg = "#161721" },
 }
 
 return M
