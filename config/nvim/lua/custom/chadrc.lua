@@ -11,6 +11,8 @@ M.ui = {
   hl_override = highlights.override,
   hl_add = highlights.add,
 
+  telescope = { style = "bordered" },
+
   nvdash = {
     load_on_startup = true,
 

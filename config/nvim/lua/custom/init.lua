@@ -5,3 +5,8 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+
+-- identation tabs (spaces by default) just changed the width
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
