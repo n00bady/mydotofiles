@@ -7,6 +7,12 @@ M.general = {
   },
 }
 
+M.telescope = {
+    n = {
+        ["<leader>fu"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find LSP symbols" },
+    },
+}
+
 -- more keybinds!
 
 return M
