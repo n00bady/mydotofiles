@@ -9,7 +9,7 @@ local b = null_ls.builtins
 local sources = {
 
   -- webdev stuff
-  b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
+  --b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
   b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
 
   -- Lua
@@ -20,13 +20,20 @@ local sources = {
 
   -- go
   b.formatting.gofumpt,
+  b.diagnostics.staticcheck,
 
   -- python
-  -- b.formatting.isort,
-  -- b.diagnostics.mypy,
+  b.formatting.black,
 
   -- shell
-  b.diagnostics.shellcheck
+  b.formatting.shellharden,
+  b.diagnostics.selene,
+
+  -- other
+  b.diagnostics.semgrep.with {
+    disabled_filetypes = { "go" },
+    method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
+  },
 }
 
 null_ls.setup {
