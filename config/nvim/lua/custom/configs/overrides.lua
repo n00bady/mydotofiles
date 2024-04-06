@@ -46,7 +46,7 @@ M.mason = {
     "staticcheck",
 
     -- shell
-    "shellhardern",
+    "shellharden",
 
     -- python
     "black",
