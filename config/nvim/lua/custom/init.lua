@@ -6,9 +6,14 @@
 --   command = "tabdo wincmd =",
 -- })
 
--- identation tabs (spaces by default) just changed the width
+vim.opt.expandtab = false
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
+-- vim.opt.spelllang = 'en_us'
+-- vim.opt.spell = true
+-- vim.opt.spelloptions = 'camel,noplainbuffer'
+
+vim.o.shell = "/usr/bin/fish"
 
 vim.filetype.add({ extension = { templ = "templ" } })

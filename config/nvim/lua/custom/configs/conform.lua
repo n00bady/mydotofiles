@@ -9,5 +9,7 @@ require("conform").setup {
     go = { "gofumpt" },
 
     shell = { "shellharden" },
+
+    toml = { "taplo" },
   },
 }

@@ -16,6 +16,7 @@ M.general = {
 M.telescope = {
     n = {
         ["<leader>fu"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find LSP symbols" },
+        ["<leader>fU"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "Find dynamic workspace LSP symbols"},
     },
 }
 
