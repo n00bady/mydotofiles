@@ -9,8 +9,8 @@ local b = null_ls.builtins
 local sources = {
 
   -- webdev stuff
-  --b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
-  b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
+  -- b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
+  b.formatting.prettier.with { filetypes = { "html", "markdown", "css", "json", "scss", "css", "javascript", "javascriptreact", "typescript", "typescriptreact" } }, -- so prettier works only on these filetypes
 
   -- Lua
   b.formatting.stylua,
@@ -31,6 +31,7 @@ local sources = {
 
   -- other
   b.diagnostics.semgrep.with {
+	filetypes = { "javascriptreact", "javascript", "typescript", "typescriptreact" },
     disabled_filetypes = { "go" },
     method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
   },

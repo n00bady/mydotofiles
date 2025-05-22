@@ -78,4 +78,15 @@ M.nvimtree = {
   },
 }
 
+M.trouble = {
+	modes = {
+		diagnostics = {
+			win = { size = 20 },
+		},
+		lsp = {
+			win = { size = 80 },
+		},
+	},
+}
+
 return M
