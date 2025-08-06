@@ -1,0 +1,25 @@
+{
+	"custom/quicklink1": {
+		"format": "\uea85",
+		"on-click": "kitty",
+		"tooltip-format": "Open a terminal"
+	},
+    "custom/quicklink2": {
+        "format": "\uf07b",
+        "on-click": "dolphin",
+        "tooltip-format": "Open the filemanager"
+    }, 
+    "custom/quicklink3": {
+        "format": "\uf269",
+        "on-click": "zen-browser",
+        "tooltip-format": "Open the browser"
+    },
+    "custom/quicklinkempty": {
+    }, 
+    "group/quicklinks": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/quicklink3",
+        ]
+    }
+}
