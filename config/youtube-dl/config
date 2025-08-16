@@ -1,4 +1,0 @@
--x
---audio-format vorbis
---audio-quality 0
--o ~/Downloads/youtube-dl/%(title)s.%(ext)s
