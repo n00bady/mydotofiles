@@ -1,10 +1,10 @@
 {
     "layer": "top",
-    "margin-top": 12,
-    "margin-bottom": 0,
-    "margin-left": 14,
-    "margin-right": 14,    
-    "spacing": 0,
+    "margin-top": 10,
+    "margin-bottom": 2,
+    "margin-left": 10,
+    "margin-right": 10,    
+    "spacing": 1,
 
     // Load Modules
     "include": [
@@ -14,7 +14,8 @@
     "modules-left": [
         "custom/appmenu",
         "hyprland/workspaces",
-        "group/quicklinks"
+        "group/quicklinks",
+		"group/hardwareUsage"
     ],
     "modules-center": [
         "hyprland/window"
@@ -22,7 +23,6 @@
     "modules-right": [
         "pulseaudio", 
         "network", 
-		"group/hardwareUsage",
 		"hyprland/language",
         "tray",
         "clock",

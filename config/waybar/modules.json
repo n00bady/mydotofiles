@@ -37,7 +37,8 @@
             "(.*) Microsoft Teams": "$1"
         },
         "separate-outputs": true,
-		"max-length": 50,
+		"min-length": 40,
+		"max-length": 100,
     },
 
     // Rofi Application Launcher
