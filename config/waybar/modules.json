@@ -38,7 +38,7 @@
         },
         "separate-outputs": true,
 		"min-length": 40,
-		"max-length": 100,
+		"max-length": 90,
     },
 
     // Rofi Application Launcher

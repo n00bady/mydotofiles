@@ -354,12 +354,13 @@ window#waybar.empty #window {
 
 #language {
     font-size: 16px;
+	background-color: @backgrounddark;
     color: @textcolor2;
     border-radius: 3px 5px 3px 5px;
     padding: 1px 5px 0px 5px;
     margin: 3px 10px 3px 0px;
     opacity:1.0;
-    border:3px dotted @bordercolor;
+    border:3px solid @bordercolor;
 }
 
 /* -----------------------------------------------------
