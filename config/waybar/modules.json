@@ -5,7 +5,8 @@
 // |_|  |_|\___/ \__,_|\__,_|_|\___||___/ 
 //                                        
 //  
-// by Stephan Raabe (2023) 
+// by n00bady (2025)
+// based on ML4W by Stephan Raabe (2023) 
 // ----------------------------------------------------- 
 //
 {
@@ -68,7 +69,7 @@
 
     // System tray
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 20,
         "spacing": 8
     },
 
@@ -115,10 +116,10 @@
 
 	// GPU Usage
 	"custom/gpu-usage": {
-		"format": "GPU:  {}",
+		"format": "󰾲  {}",
 		"exec": "~/.cargo/bin/gpu-usage-waybar --interval 5000",
 		"return-type": "json",
-		"format-icons": "󰾲",
+		// "format-icons": "󰾲",
 	},
 
 	// CPU Temp
@@ -127,10 +128,18 @@
 		"hwmon-path-abs": "/sys/devices/pci0000:00/0000:00:18.3/hwmon",
 		"input-filename": "temp1_input",
 		"critical-threshold": 99,
-		"format-critical": "{temperatureC}°C!!!",
-		"format": "{temperatureC}°C",
-		"min-length": 4
+		"format-critical": "\uf2c7 {temperatureC}°C \uf071",
+		"format": "\uf2c9 {temperatureC}°C",
+		"min-length": 6
 	},
+
+    // Harddisc space used
+    "disk": {
+        "interval": 30,
+        "format": "D {percentage_used}% ",
+        "path": "/",
+        "on-click": "alacritty -e htop"
+    }, 
 
 	// Group Hardware
 	"group/hardwareUsage": {
@@ -143,34 +152,10 @@
 		]
 	},
 
-    // Harddisc space used
-    "disk": {
-        "interval": 30,
-        "format": "D {percentage_used}% ",
-        "path": "/",
-        "on-click": "alacritty -e htop"
-    }, 
-
+	// Language
     "hyprland/language": {
         "format": " {short} ",
 		"min-length": 3
-    },
-
-    // Group Hardware
-    "group/hardware": {
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 300,
-            "children-class": "not-memory",
-            "transition-left-to-right": false
-        },        
-        "modules": [
-            "custom/system",
-            "disk",
-            "cpu",
-            "memory",
-            "hyprland/language"
-        ]
     },
     
   // Network
@@ -189,20 +174,20 @@
   },
 
     // Battery
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}   {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-alt": "{icon}  {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
-    },
+    // "battery": {
+    //     "states": {
+    //         // "good": 95,
+    //         "warning": 30,
+    //         "critical": 15
+    //     },
+    //     "format": "{icon}   {capacity}%",
+    //     "format-charging": "  {capacity}%",
+    //     "format-plugged": "  {capacity}%",
+    //     "format-alt": "{icon}  {time}",
+    //     // "format-good": "", // An empty format will hide the module
+    //     // "format-full": "",
+    //     "format-icons": [" ", " ", " ", " ", " "]
+    // },
 
     // Pulseaudio
     "pulseaudio": {
@@ -226,13 +211,13 @@
     },
 
     // Bluetooth
-    "bluetooth": {
-        "format-disabled": "",
-        "format-off": "",
-        "interval": 30,
-        "on-click": "blueman-manager",
-        "format-no-controller": ""
-    },
+    // "bluetooth": {
+    //     "format-disabled": "",
+    //     "format-off": "",
+    //     "interval": 30,
+    //     "on-click": "blueman-manager",
+    //     "format-no-controller": ""
+    // },
 
     // Other
     "user": {
@@ -253,11 +238,11 @@
     },
 
 	// Backlight/Slider
-	"backlight/slider": {
-	"min": 10,
-	"max": 100,
-	"orientation": "horizontal",
-	"device": "backlightctl"
-	},
+	// "backlight/slider": {
+	// "min": 10,
+	// "max": 100,
+	// "orientation": "horizontal",
+	// "device": "backlightctl"
+	// },
 	
 }
