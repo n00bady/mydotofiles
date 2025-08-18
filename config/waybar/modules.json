@@ -14,6 +14,8 @@
     "hyprland/workspaces" : {
 		"sort": "id",
         "on-click": "activate",
+		"on-scroll-up": "~/.hyprScripts/workspaceChanger.sh +",
+		"on-scroll-down": "~/.hyprScripts/workspaceChanger.sh -",
         "active-only": false,
         "all-outputs": false,
         "format": "{}",
@@ -155,6 +157,7 @@
 	// Language
     "hyprland/language": {
         "format": " {short} ",
+		"on-click": "hyprctl switchxkblayout current next",
 		"min-length": 3
     },
     
@@ -191,11 +194,10 @@
 
     // Pulseaudio
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{icon}  {volume}%",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": "\uf6a9{format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -205,10 +207,21 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", " ", " "]
+            "default": ["", "\uf027", " "]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol-qt",
+		"min-length": 7
     },
+
+	// wireplumber
+	"wireplumber": {
+		"format": "{volume}%",
+		"format-muted": "\uf6a9",
+		"format-source": " {source_volume}%",
+		"format-source-muted": "\uf131",
+		"on-click": "pavucontrol-qt",
+		"format-icons": ["", "\uf027", " "]
+	},
 
     // Bluetooth
     // "bluetooth": {
