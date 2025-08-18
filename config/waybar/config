@@ -21,7 +21,7 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "pulseaudio", 
+		"pulseaudio",
         "network", 
 		"hyprland/language",
         "tray",
