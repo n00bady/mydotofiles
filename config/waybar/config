@@ -8,13 +8,12 @@
 
     // Load Modules
     "include": [
-        "~/.config/waybar/waybar-quicklinks.json",
+        "~/.config/waybar/waybar-appmenu.json",
         "~/.config/waybar/modules.json"
     ],    
     "modules-left": [
-        "custom/appmenu",
+        "group/appmenu",
         "hyprland/workspaces",
-        "group/quicklinks",
 		"group/hardwareUsage"
     ],
     "modules-center": [

@@ -43,13 +43,6 @@
 		"min-length": 40,
 		"max-length": 90,
     },
-
-    // Rofi Application Launcher
-    "custom/appmenu": {
-        "format": "Apps",
-        "on-click": "rofi -show drun -replace",
-        "tooltip": false
-    },
     
     // Power Menu
     "custom/exit": {

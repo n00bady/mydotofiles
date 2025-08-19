@@ -21,6 +21,7 @@
 @define-color textcolor2 #ebdbb2;
 @define-color textcolor3 #ebdbb2;
 @define-color iconcolor #fabd2d;
+@define-color criticalcolor #cc241d;
 
 /* -----------------------------------------------------
  * General 
@@ -157,14 +158,28 @@ window#waybar.empty #window {
 }
 
 /* -----------------------------------------------------
- * Custom Quicklinks
+ * Custom Appmenu and Quicklinks
  * ----------------------------------------------------- */
+#custom-quicklinkFirst {
+    background-color: @backgrounddark;
+    font-size: 20px;
+    color: @textcolor2;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0px 10px 0px 10px;
+    margin: 2px 17px 2px 0px;
+    opacity:1.0;
+    border:2px solid @bordercolor;
+}
+
+#custom-quicklinkFirst.Hover {
+	color: @iconcolor;
+}
 
 #custom-quicklink1,
 #custom-quicklink2,
 #custom-quicklink3 {
-	margin: 5px;
-	font-size: 20px;
+	margin: 3px;
+	font-size: 16px;
 	font-weight: bold;
 	color: @textcolor2;
 }
@@ -175,6 +190,10 @@ window#waybar.empty #window {
 	color: @iconcolor;
 }
 
+/* -----------------------------------------------------
+ * Idle Inhibator
+ * ----------------------------------------------------- */
+
 #custom-hypridle.active {
     color: @iconcolor;
 }
@@ -182,10 +201,6 @@ window#waybar.empty #window {
 #custom-hypridle.notactive {
     color: #dc2f2f;
 }
-
-/* -----------------------------------------------------
- * Idle Inhibator
- * ----------------------------------------------------- */
 
 #idle_inhibitor {
     margin-right: 15px;
@@ -201,21 +216,6 @@ window#waybar.empty #window {
     font-weight: bold;
     opacity: 0.8;
     color: #dc2f2f;
-}
-
-/* -----------------------------------------------------
- * Custom Modules
- * ----------------------------------------------------- */
-
-#custom-appmenu {
-    background-color: @backgrounddark;
-    font-size: 16px;
-    color: @textcolor2;
-    border-radius: 5px 5px 5px 5px;
-    padding: 0px 10px 0px 10px;
-    margin: 2px 17px 2px 0px;
-    opacity:1.0;
-    border:2px solid @bordercolor;
 }
 
 /* -----------------------------------------------------
@@ -238,9 +238,13 @@ window#waybar.empty #window {
     margin: 0px;
 	padding-left: 15px;
 	border-left: 1px dashed @bordercolor;
-    font-size:20px;
+    font-size: 20px;
     color: @iconcolor;
-    opacity: 0.8;
+    opacity: 1;
+}
+
+#custom-exit:hover {
+	color: @criticalcolor;
 }
 
 /* -----------------------------------------------------
@@ -248,18 +252,40 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #cpu {
-	margin:0px 1px 0px 5px;
-    padding:0px;
-    font-size:16px;
-    color:@textcolor2;
+	margin: 0px 0px 0px 5px;
+    padding: 0px;
+    font-size: 16px;
+    color: @textcolor2;
 }
 
-#disk,#memory,#temperature,#custom-gpu-usage {
-    margin:0px 5px 0px 0px;
-    padding:0px;
-    font-size:16px;
-    color:@textcolor2;
+#temperature {
+	margin: 0px 5px 0px 0px;
+    padding: 0px;
+    font-size: 16px;
+    color: @textcolor2;
 }
+
+#temperature.critical {
+	color: @criticalcolor;
+}
+
+#custom-gpu-usage {
+	margin: 0px 5px 0px 0px;
+    padding: 0px;
+    font-size: 16px;
+    color: @textcolor2;
+}
+
+#disk,#memory {
+    margin: 0px 1px 0px 0px;
+    padding: 0px;
+    font-size: 16px;
+    color: @textcolor2;
+}
+
+/* -----------------------------------------------------
+ * Language 
+ * ----------------------------------------------------- */
 
 #language {
     background-color: @backgroundlight;
