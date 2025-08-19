@@ -8,7 +8,8 @@ My Hyprland config is based on the dotfiles of
 - Colors based on the gruvbox palette (mostly).
 - `QT_QPA_PLATFORMTHEME` set to `kde` and the qt theme selection happens from 
 kde settings. Also for the `SDDM` too. The current theme set is 
-[**Psion**](https://store.kde.org/p/2138046).
+[**Psion**](https://store.kde.org/p/2138046), the application style is set to **MS Windows 9x**
+and the colors are set to gruvbox plasma but with a small alteration to accommodate my accent color of choice(#fabc2d).
 - `GTK` apps theme is set with `nwg-look` and the current theme is set to use 
 [**orthogonal-markers**](https://git.disroot.org/eudaimon/orthogonal-markers). 
 Orthogonal-markers is set to use `skeuo` as theme and `dark-partii.css` for colors.
