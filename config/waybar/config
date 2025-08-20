@@ -25,6 +25,8 @@
 		"hyprland/language",
         "tray",
         "clock",
+		"custom/dunst",
+		"idle_inhibitor",
         "custom/exit"
     ]
 }

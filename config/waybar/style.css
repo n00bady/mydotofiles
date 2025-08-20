@@ -8,8 +8,7 @@
  *  
  * by n00bady (2025)
  * based on ML4W by Stephan Raabe (2024) 
- * ----------------------------------------------------- 
-*/
+ * ----------------------------------------------------- */
 
 @define-color backgroundlight #3c3836;
 @define-color backgrounddark #282828;
@@ -19,7 +18,7 @@
 @define-color bordercolor #fabd2d;
 @define-color textcolor1 #928374;
 @define-color textcolor2 #ebdbb2;
-@define-color textcolor3 #ebdbb2;
+@define-color textcolor3 #8ec07c;
 @define-color iconcolor #fabd2d;
 @define-color criticalcolor #cc241d;
 
@@ -28,7 +27,7 @@
  * ----------------------------------------------------- */
 
  * {
-    font-family: "Fira Sans Semibold", "Font Awesome 7 Free", "Font Awesome 7 Brands", "Font Awesome 6 Free", "Font Awesome 6 Brands", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family:"DepartureMono Nerd Font Propo", "Fira Sans Semibold", "Font Awesome 7 Free", "Font Awesome 7 Brands",  Arial;
     border: none;
     border-radius: 0px;
 }
@@ -89,7 +88,7 @@ window#waybar {
 
 tooltip {
     border-radius: 16px;
-    background-color: @backgroundlight;
+    background-color: @backgrounddark;
     opacity:0.9;
     padding:20px;
     margin:0px;
@@ -191,43 +190,32 @@ window#waybar.empty #window {
 }
 
 /* -----------------------------------------------------
- * Idle Inhibator
+ * Idle Inhibitor
  * ----------------------------------------------------- */
 
-#custom-hypridle.active {
-    color: @iconcolor;
-}
-
-#custom-hypridle.notactive {
-    color: #dc2f2f;
-}
-
 #idle_inhibitor {
-    margin-right: 15px;
-    font-size: 22px;
+    margin-right: 5px;
+    font-size: 20px;
     font-weight: bold;
-    opacity: 0.8;
     color: @iconcolor;
 }
 
 #idle_inhibitor.activated {
-    margin-right: 15px;
+    margin-right: 5px;
     font-size: 20px;
     font-weight: bold;
-    opacity: 0.8;
-    color: #dc2f2f;
+    color: @criticalcolor;
 }
 
 /* -----------------------------------------------------
- * Custom Notification
+ * Dunst Notifications
  * ----------------------------------------------------- */
 
- #custom-notification {
-    margin: 0px 13px 0px 0px;
-    padding:0px;
-    font-size:20px;
+ #custom-dunst {
+    margin: 0px 5px 0px 0px;
+    padding: 0px;
+    font-size: 20px;
     color: @iconcolor;
-    opacity: 0.8;
 }
 
 /* -----------------------------------------------------
@@ -302,14 +290,14 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #clock {
-    background-color: @backgrounddark;
+    background-color: @backgroundlight;
+	font-family: DepartureMono Nerd Font Propo;
     font-size: 16px;
-    color: @textcolor2;
+    color: @textcolor3;
     border-radius: 3px 5px 3px 5px;
     padding: 1px 10px 0px 10px;
     margin: 3px 10px 3px 0px;
     opacity:1.0;
-    border:3px solid @bordercolor;
 }
 
 /* -----------------------------------------------------
@@ -453,27 +441,3 @@ window#waybar.empty #window {
     -gtk-icon-effect: highlight;
 }
 
-/* -----------------------------------------------------
- * Backlight/Slider 
- * ----------------------------------------------------- 
-
-#backlight-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
-}
-#backlight-slider trough {
-    min-height: 80px;
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: black;
-}
-#backlight-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: red;
-}
-*/
