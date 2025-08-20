@@ -107,7 +107,7 @@ tooltip label {
     padding: 2px 10px 0px 10px;
     border-radius: 5px 5px 5px 5px;
 	color: @textcolor1;
-    font-size:16px;
+    font-size:14px;
     font-weight:normal;
     opacity:1.0;
 }
@@ -242,14 +242,14 @@ window#waybar.empty #window {
 #cpu {
 	margin: 0px 0px 0px 5px;
     padding: 0px;
-    font-size: 16px;
+    font-size: 14px;
     color: @textcolor2;
 }
 
 #temperature {
 	margin: 0px 5px 0px 0px;
     padding: 0px;
-    font-size: 16px;
+    font-size: 14px;
     color: @textcolor2;
 }
 
@@ -260,14 +260,14 @@ window#waybar.empty #window {
 #custom-gpu-usage {
 	margin: 0px 5px 0px 0px;
     padding: 0px;
-    font-size: 16px;
+    font-size: 14px;
     color: @textcolor2;
 }
 
 #disk,#memory {
     margin: 0px 1px 0px 0px;
     padding: 0px;
-    font-size: 16px;
+    font-size: 14px;
     color: @textcolor2;
 }
 
@@ -277,7 +277,7 @@ window#waybar.empty #window {
 
 #language {
     background-color: @backgroundlight;
-    font-size: 16px;
+    font-size: 14px;
     color: @textcolor2;
     border-radius: 5px 5px 5px 5px;
     padding: 2px 10px 0px 10px;
@@ -292,7 +292,7 @@ window#waybar.empty #window {
 #clock {
     background-color: @backgroundlight;
 	font-family: DepartureMono Nerd Font Propo;
-    font-size: 16px;
+    font-size: 14px;
     color: @textcolor3;
     border-radius: 3px 5px 3px 5px;
     padding: 1px 10px 0px 10px;
@@ -306,7 +306,7 @@ window#waybar.empty #window {
 
 #backlight {
     background-color: @backgroundlight;
-    font-size: 16px;
+    font-size: 14px;
     color: @textcolor2;
     border-radius: 5px 5px 5px 5px;
     padding: 2px 10px 0px 10px;
@@ -319,7 +319,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 #wireplumber {
     background-color: @backgroundlight;
-    font-size: 16px;
+    font-size: 14px;
     color: @textcolor2;
     border-radius: 5px 5px 5px 5px;
     padding: 2px 10px 0px 10px;
@@ -329,7 +329,7 @@ window#waybar.empty #window {
 
 #pulseaudio {
     background-color: @backgroundlight;
-    font-size: 16px;
+    font-size: 14px;
     color: @textcolor2;
     border-radius: 5px 5px 5px 5px;
     padding: 2px 10px 0px 10px;
@@ -349,7 +349,7 @@ window#waybar.empty #window {
 
 #network {
     background-color: @backgroundlight;
-    font-size: 16px;
+    font-size: 14px;
     color: @textcolor2;
     border-radius: 5px 5px 5px 5px;
     padding: 2px 10px 0px 10px;
