@@ -106,7 +106,7 @@ tooltip label {
     margin: 3px 15px 3px 0px;
     padding: 2px 10px 0px 10px;
     border-radius: 5px 5px 5px 5px;
-	color: @textcolor1;
+	color: @textcolor2;
     font-size:14px;
     font-weight:normal;
     opacity:1.0;
@@ -265,7 +265,7 @@ window#waybar.empty #window {
 }
 
 #disk,#memory {
-    margin: 0px 1px 0px 0px;
+    margin: 0px 5px 0px 0px;
     padding: 0px;
     font-size: 14px;
     color: @textcolor2;

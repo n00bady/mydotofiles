@@ -34,7 +34,7 @@
     "hyprland/window": {
         "separate-outputs": true,
 		"min-length": 40,
-		"max-length": 90,
+		"max-length": 80,
     },
     
     // Power Menu
@@ -85,23 +85,22 @@
     // CPU
     "cpu": {
 		"interval": 3,
-        "format": "\uf4bc  {usage}%",
+        "format": "\uf4bc {usage}%",
 		"min-length": 6,
     },
 
     // Memory
     "memory": {
 		"interval": 5,
-        "format": "\ue266  {}% ",
+        "format": "\ue266 {}% ",
 		"min-length": 6,
     },
 
 	// GPU Usage
 	"custom/gpu-usage": {
-		"format": "󰾲  {}",
+		"format": "󰾲 {}",
 		"exec": "~/.cargo/bin/gpu-usage-waybar --interval 5000",
 		"return-type": "json",
-		// "format-icons": "󰾲",
 	},
 
 	// CPU Temp
@@ -145,16 +144,16 @@
   "network": {
     "format": "{ifname}",
     "format-wifi": " {essid} ({signalStrength}%)",
-    "format-ethernet": "  {ifname}",
-    "format-disconnected": "Disconnected ⚠",
+    "format-ethernet": " {ifname}",
+    "format-disconnected": "⚠Disconnected⚠",
     "tooltip-format": " {ifname} via {gwaddri}",
-    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-wifi": " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
     "on-click": "nm-connection-editor",
 	"on-click-right": "firewall-config",
-	"min-length": 4
+	"min-length": 10
   },
 
     // Battery
