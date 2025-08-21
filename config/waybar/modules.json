@@ -93,6 +93,7 @@
     "memory": {
 		"interval": 5,
         "format": "\ue266 {}% ",
+		"tooltip-format": "RAM: {used}/{total}GiB\nSwap: {swapUsed}/{swapTotal}GiB",
 		"min-length": 6,
     },
 
@@ -111,6 +112,7 @@
 		"critical-threshold": 99,
 		"format-critical": "\uf2c7 {temperatureC}°C \uf071",
 		"format": "\uf2c9 {temperatureC}°C",
+		"tooltip": false,
 		"min-length": 6
 	},
 
