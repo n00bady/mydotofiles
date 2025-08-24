@@ -19,4 +19,8 @@ else
 	echo $DISABLED > $DIR/$STATUS
 fi
 
-echo "$(<$DIR/$STATUS)"
+if [ ! -e $DIR/$STATUS ] || [ ! -s $DIR/$STATUS ]; then 
+	echo $ENABLED
+else 
+	echo "$(<$DIR/$STATUS)"
+fi
