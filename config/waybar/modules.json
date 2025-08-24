@@ -176,12 +176,12 @@
 
     // Pulseaudio
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
+        "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "\uf6a9{format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-muted": "\uf6a9",
+        "format-source": "",
+        "format-source-muted": "<span color='#cc241d'><b></b></span>",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -192,7 +192,8 @@
             "default": ["", "\uf027", " "]
         },
         "on-click": "pavucontrol-qt",
-		"min-length": 7
+		"min-length": 7,
+		"max-volume": 100
     },
 
 	// wireplumber
