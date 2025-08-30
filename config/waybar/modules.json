@@ -179,7 +179,7 @@
         "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "\uf6a9",
+        "format-muted": "\uf6a9 {format_source}",
         "format-source": "",
         "format-source-muted": "<span color='#cc241d'><b></b></span>",
         "format-icons": {

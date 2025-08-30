@@ -12,7 +12,7 @@ kde settings. Also for the `SDDM` too. The current theme set is
 and the colors are set to gruvbox plasma but with a small alteration to accommodate my accent color of choice(#fabc2d).
 - `GTK` apps theme is set with `nwg-look` and the current theme is set to use 
 [**orthogonal-markers**](https://git.disroot.org/eudaimon/orthogonal-markers). 
-Orthogonal-markers is set to use `skeuo` as theme and `dark-partii.css` for colors.
+Orthogonal-markers is set to use `skeuo` as theme and `dark-gruvbox.css` for colors.
 - For a bar I use `waybar`.
 - I have some scripts for reloading wallpaper, waybar and others in the `hyprScripts/`
 folder to use with keybinds.
