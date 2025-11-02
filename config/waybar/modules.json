@@ -227,7 +227,6 @@
     },
 
 	// dunst notification
-	// Doesn't sync with other monitors.
 	"custom/dunst": {
 		"exec": "~/.hyprScripts/dunst.sh",
 		"on-click": "dunstctl set-paused toggle",

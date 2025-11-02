@@ -7,7 +7,11 @@ DISABLED=""
 DIR="/tmp/dunst_waybar_module"
 STATUS="status.txt"
 
-mkdir -p $DIR && touch "$DIR/$STATUS" > /dev/null 2>&1 &&
+if [ -f "$DIR/$STATUS" ]; then
+	:
+else
+	mkdir -p $DIR && touch "$DIR/$STATUS" > /dev/null 2>&1
+fi
 
 if [ "$COUNT" != "0" ]; then
 	DISABLED=" $COUNT"
