@@ -126,6 +126,7 @@
 
 	// Group Hardware
 	"group/hardwareUsage": {
+		"style": "background-color: #3c3836",
 		"orientation": "horizontal",
 		"modules": [
 			"cpu",
@@ -177,8 +178,8 @@
     // Pulseaudio
     "pulseaudio": {
         "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-bluetooth": "{icon} {volume}%  {format_source}",
+        "format-bluetooth-muted": "  {icon}  {format_source}",
         "format-muted": "\uf6a9 {format_source}",
         "format-source": "",
         "format-source-muted": "<span color='#cc241d'><b></b></span>",
@@ -186,9 +187,6 @@
             "headphone": "",
             "hands-free": "",
             "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", "\uf027", " "]
         },
         "on-click": "pavucontrol-qt",
@@ -223,7 +221,8 @@
             "activated": "",
             "deactivated": ""
         },
-        "on-click-right": "hyprlock"        
+        "on-click-right": "hyprlock",
+		"min-length": 3,
     },
 
 	// dunst notification

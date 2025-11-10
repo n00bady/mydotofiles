@@ -1,444 +1,325 @@
+/* 
+* __        __          _                  ____  _         _       
+* \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
+*  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
+*   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
+*    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
+*                 |___/                              |___/ 
+* by n00bady (2025)
+*/
+
+/* -=COLORS=- 
+* based on the gruvbox dark palette
+*
+*  --bg-lighter: #7c6f64;
+*  --bg-light: #3c3836;
+*  --bg-dark: #282828;
+*  --bg-workspaces-unfocused: #282828;
+*  --bg-border: #fabd2d;
+*  --fg-text-1: #928374;
+*  --fg-text-2: #ebdbb2;
+*  --fg-text-3: #8ec07c;
+*  --icon-color: #fabd2d;
+*  --critical-color: #cc241d;
+*
+*  Fonts 
+*  --font-family:
+*    "DepartureMono Nerd Font Propo", "Font Awesome 7 Free",
+*    "Font Awesome 7 Brands", Arial;
+*  --font-size: 14px;
+*
+*/
+
 /*
- * __        __          _                  ____  _         _       
- * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
- *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
- *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
- *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
- *                 |___/                              |___/         
- *  
- * by n00bady (2025)
- * based on ML4W by Stephan Raabe (2024) 
- * ----------------------------------------------------- */
+* -=GENERAL=- 
+*/
 
-@define-color backgroundlight #3c3836;
-@define-color backgrounddark #282828;
-@define-color workspacesbackground1 #282828;
-@define-color workspacesbackground2 #3c3836;
-@define-color workspacesbackgroundUnfocused #282828;
-@define-color bordercolor #fabd2d;
-@define-color textcolor1 #928374;
-@define-color textcolor2 #ebdbb2;
-@define-color textcolor3 #8ec07c;
-@define-color iconcolor #fabd2d;
-@define-color criticalcolor #cc241d;
-
-/* -----------------------------------------------------
- * General 
- * ----------------------------------------------------- */
-
- * {
-    font-family:"DepartureMono Nerd Font Propo", "Fira Sans Semibold", "Font Awesome 7 Free", "Font Awesome 7 Brands",  Arial;
-    border: none;
-    border-radius: 0px;
+* {
+  font-family:
+    "DepartureMono Nerd Font Propo", "Font Awesome 7 Free",
+    "Font Awesome 7 Brands", Arial;
+  font-size: 14px;
+  border: none;
+  /* min-height: 30px; */
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-bottom: 0px solid @bordercolor;
-    background: transparent;
-    transition-property: background-color;
-    transition-duration: .5s;
+  background: transparent;
+  border-radius: 10px;
+  /* border: 1px solid #fabd2d; */
 }
 
-/* -----------------------------------------------------
- * Workspaces
- * ----------------------------------------------------- */
+/*
+* -=WORKSPACES=-
+*/
 
 #workspaces {
-    background: @workspacesbackground1;
-    margin: 2px 18px 3px 1px;
-    padding: 0px 2px;
-    border-radius: 5px 5px 5px 5px;
-    font-weight: bold;
-    font-style: normal;
-    opacity: 1.0;
-    color: @textcolor1;
-	border-color: @bordercolor;
+  background-color: #3c3836;
+  border-color: #fabd2d;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 2px 5px 2px 5px;
+  margin: 3px;
 }
 
 #workspaces button {
-    padding: 0px 6px;
-    margin: 3px 2px;
-    border-radius: 3px 3px 3px 3px;
-    color: @textcolor1;
-    background-color: @workspacesbackgroundUnfocused;
-    transition: all 0.1s linear;
-    opacity: 0.6;
+  color: #928374;
+  background-color: #282828;
+  border-radius: 5px;
+  transition: all 0.1s linear;
 }
 
 #workspaces button.active {
-    color: @textcolor2;
-    background: @workspacesbackground2;
-    border-radius: 3px 3px 3px 3px;
-    min-width: 30px;
-    transition: all 0.1s linear;
-    opacity:1.0;
+  color: #ebdbb2;
+  background: #3c3836;
+  border-radius: 5px;
+  min-width: 30px;
+  transition: all 0.25s linear;
 }
 
-#workspaces button:hover {
-    color: @textcolor2;
-    background: @workspacesbackground2;
-    border-radius: 5px 5px 5px 5px;
-    opacity:0.7;
+#workspaces button.hover {
+  color: #ebdbb2;
+  background-color: #7c6f64;
+  border-radius: 10px;
 }
 
-/* -----------------------------------------------------
- * Tooltips
- * ----------------------------------------------------- */
+#workspaces button.needs-attention {
+  color: #cc241d;
+  border-radius: 10px;
+  transition: all 0.5s ease-in;
+}
+
+/*
+* -=TOOLTIPS=-
+*/
 
 tooltip {
-    border-radius: 16px;
-    background-color: @backgrounddark;
-    opacity:0.9;
-    padding:20px;
-    margin:0px;
+  background-color: #282828;
+  border-radius: 5px;
+  opacity: 0.9;
+  padding: 20px;
+  margin: 1px;
 }
 
 tooltip label {
-    color: @textcolor2;
+  color: #ebdbb2;
 }
 
-/* -----------------------------------------------------
- * Window
- * ----------------------------------------------------- */
+/*
+* -=WINDOW=-
+*/
 
 #window {
-    margin: 3px 15px 3px 0px;
-    padding: 2px 10px 0px 10px;
-    border-radius: 5px 5px 5px 5px;
-	color: @textcolor2;
-    font-size:14px;
-    font-weight:normal;
-    opacity:1.0;
+  color: #ebdbb2;
+  background-color: rgba(60, 56, 54, 0.75);
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
 }
 
 window#waybar.empty #window {
-    background-color:transparent;
+  background-color: transparent;
 }
 
-/* -----------------------------------------------------
- * Taskbar
- * ----------------------------------------------------- */
-
-#taskbar {
-    background: @backgroundlight;
-    margin: 3px 15px 3px 0px;
-    padding:0px;
-    border-radius: 5px 5px 5px 5px;
-    font-weight: normal;
-    font-style: normal;
-    opacity:1.0;
-    border: 3px solid @backgroundlight;
-}
-
-#taskbar button {
-    margin:0;
-    border-radius: 5px 5px 5px 5px;
-    padding: 0px 5px 0px 5px;
-}
-
-#taskbar.empty {
-    background:transparent;
-    border:0;
-    padding:0;
-    margin:0;
-}
-
-/* -----------------------------------------------------
- * Modules
- * ----------------------------------------------------- */
-
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
-/* -----------------------------------------------------
- * Custom Appmenu and Quicklinks
- * ----------------------------------------------------- */
-#custom-quicklinkFirst {
-    background-color: @backgrounddark;
-    font-size: 20px;
-    color: @textcolor2;
-    border-radius: 5px 5px 5px 5px;
-    padding: 0px 10px 0px 10px;
-    margin: 2px 17px 2px 0px;
-    opacity:1.0;
-    border:2px solid @bordercolor;
-}
-
-#custom-quicklinkFirst.Hover {
-	color: @iconcolor;
-}
-
-#custom-quicklink1,
-#custom-quicklink2,
-#custom-quicklink3 {
-	margin: 3px;
-	font-size: 16px;
-	font-weight: bold;
-	color: @textcolor2;
-}
-
-#custom-quicklink1:hover,
-#custom-quicklink2:hover,
-#custom-quicklink3:hover {
-	color: @iconcolor;
-}
-
-/* -----------------------------------------------------
- * Idle Inhibitor
- * ----------------------------------------------------- */
+/*
+* -=IDLE INHIBITOR=-
+*/
 
 #idle_inhibitor {
-    margin-right: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    color: @iconcolor;
+  background-color: #3c3836;
+  color: #fabd2d;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
 }
 
 #idle_inhibitor.activated {
-    margin-right: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    color: @criticalcolor;
+  color: #cc241d;
+  background-color: #3c3836;
 }
 
-/* -----------------------------------------------------
- * Dunst Notifications
- * ----------------------------------------------------- */
+/*
+* -=DUNST NOTIFICATIONS=-
+*/
 
- #custom-dunst {
-    margin: 0px 5px 0px 0px;
-    padding: 0px;
-    font-size: 20px;
-    color: @iconcolor;
+#custom-dunst {
+  color: #fabd2d;
+  background-color: #3c3836;
+  font-size: 18px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
 }
 
-/* -----------------------------------------------------
- * Custom Exit
- * ----------------------------------------------------- */
+/*
+* -=CUSTOM EXIT MENU=-
+*/
 
 #custom-exit {
-    margin: 0px;
-	padding-left: 15px;
-	border-left: 1px dashed @bordercolor;
-    font-size: 20px;
-    color: @iconcolor;
-    opacity: 1;
+  color: #fabd2d;
+  background-color: #3c3836;
+  font-size: 19px;
+  border-radius: 50%;
+  border: 2px dotted #fabd2d;
+  margin-left: 15px;
 }
 
 #custom-exit:hover {
-	color: @criticalcolor;
+  color: #ebdbb2;
+  background-color: #cc241d;
+  border: 2px dotted #ebdbb2;
 }
 
-/* -----------------------------------------------------
- * Hardware Group
- * ----------------------------------------------------- */
+/*
+* -=HARDWARE GROUP=-
+*/
 
 #cpu {
-	margin: 0px 0px 0px 5px;
-    padding: 0px;
-    font-size: 14px;
-    color: @textcolor2;
+  color: #ebdbb2;
+  background-color: #3c3836;
+  border-radius: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
 }
 
 #temperature {
-	margin: 0px 5px 0px 0px;
-    padding: 0px;
-    font-size: 14px;
-    color: @textcolor2;
+  color: #ebdbb2;
+  background-color: #3c3836;
+  border-radius: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
 }
 
 #temperature.critical {
-	color: @criticalcolor;
+  color: #cc241d;
 }
 
 #custom-gpu-usage {
-	margin: 0px 5px 0px 0px;
-    padding: 0px;
-    font-size: 14px;
-    color: @textcolor2;
+  color: #ebdbb2;
+  background-color: #3c3836;
+  border-radius: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
 }
 
-#disk,#memory {
-    margin: 0px 5px 0px 0px;
-    padding: 0px;
-    font-size: 14px;
-    color: @textcolor2;
+#disk,
+#memory {
+  color: #ebdbb2;
+  background-color: #3c3836;
+  border-radius: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
 }
 
-/* -----------------------------------------------------
- * Language 
- * ----------------------------------------------------- */
+/*
+* -=LANGUAGE=-
+*/
 
 #language {
-    background-color: @backgroundlight;
-    font-size: 16px;
-    color: @textcolor2;
-    border-radius: 5px 5px 5px 5px;
-    padding: 2px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity:1.0;
+  color: #ebdbb2;
+  background-color: #3c3836;
+  border-radius: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
 }
 
-/* -----------------------------------------------------
- * Clock
- * ----------------------------------------------------- */
+/*
+* -=CLOCK=-
+*/
 
 #clock {
-    background-color: @backgroundlight;
-	font-family: DepartureMono Nerd Font Propo;
-    font-size: 14px;
-	font-weight: bold;
-    color: @iconcolor;
-    border-radius: 3px 5px 3px 5px;
-    padding: 1px 10px 0px 10px;
-    margin: 3px 10px 3px 0px;
-    opacity:1.0;
+  color: #fabd2d;
+  background-color: #3c3836;
+  font-family: DepartureMono Nerd Font Propo;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
 }
 
-/* -----------------------------------------------------
- * Backlight
- * ----------------------------------------------------- */
-
-#backlight {
-    background-color: @backgroundlight;
-    font-size: 14px;
-    color: @textcolor2;
-    border-radius: 5px 5px 5px 5px;
-    padding: 2px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity:1.0;
-}
-
-/* -----------------------------------------------------
- * Pulseaudio
- * ----------------------------------------------------- */
-#wireplumber {
-    background-color: @backgroundlight;
-    font-size: 14px;
-    color: @textcolor2;
-    border-radius: 5px 5px 5px 5px;
-    padding: 2px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity:1.0;
-}
+/*
+* -=PULSEAUDIO=-
+*/
 
 #pulseaudio {
-    background-color: @backgroundlight;
-    font-size: 14px;
-    color: @textcolor2;
-    border-radius: 5px 5px 5px 5px;
-    padding: 2px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity:1.0;
+  color: #ebdbb2;
+  background-color: #3c3836;
+  font-size: 14px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
 }
 
-#wireplumber.muted,
 #pulseaudio.muted {
-    background-color: @backgrounddark;
-    color: @textcolor1;
+  color: #928374;
+  background-color: #282828;
 }
 
-/* -----------------------------------------------------
- * Network
- * ----------------------------------------------------- */
+/*
+* -=NETWORK=-
+*/
 
 #network {
-    background-color: @backgroundlight;
-    font-size: 14px;
-    color: @textcolor2;
-    border-radius: 5px 5px 5px 5px;
-    padding: 2px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity:1.0;
+  color: #ebdbb2;
+  background-color: #3c3836;
+  font-size: 14px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
 }
 
 #network.ethernet {
-    background-color: @backgroundlight;
-    color: @textcolor2;
+  color: #ebdbb2;
+  background-color: #3c3836;
 }
 
 #network.wifi {
-    background-color: @backgroundlight;
-    color: @textcolor2;
+  color: #ebdbb2;
+  background-color: #3c3836;
 }
 
-/* -----------------------------------------------------
- * Bluetooth
- * ----------------------------------------------------- 
-
-#bluetooth, #bluetooth.on, #bluetooth.connected {
-    background-color: @backgroundlight;
-    font-size: 16px;
-    color: @textcolor2;
-    border-radius: 5px 5px 5px 5px;
-    padding: 2px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity:1.0;
-}
-
-#bluetooth.off {
-    background-color: transparent;
-    padding: 0px;
-    margin: 0px;
-}
+/*
+* -=TRAY=-
 */
-
-/* -----------------------------------------------------
- * Battery
- * -----------------------------------------------------
-
-#battery {
-    background-color: @backgroundlight;
-    font-size: 16px;
-    color: @textcolor2;
-    border-radius: 5px 5px 5px 5px;
-    padding: 2px 15px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity:1.0;
-}
-
-#battery.charging, #battery.plugged {
-    color: @textcolor2;
-    background-color: @backgroundlight;
-}
-
-@keyframes blink {
-    to {
-        background-color: @backgroundlight;
-        color: @textcolor2;
-    }
-}
-
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: @textcolor3;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-*/
-
-/* -----------------------------------------------------
- * Tray
- * ----------------------------------------------------- */
 
 #tray {
-    padding: 0px 15px 0px 0px;
+  background-color: #3c3836;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 3px;
 }
 
 #tray > .passive {
-    -gtk-icon-effect: dim;
+  -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-    -gtk-icon-effect: highlight;
+  -gtk-icon-effect: highlight;
 }
-
