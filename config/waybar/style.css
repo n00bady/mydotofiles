@@ -95,7 +95,7 @@ window#waybar {
 
 tooltip {
   background-color: #282828;
-  border-radius: 5px;
+  border-radius: 10px;
   opacity: 0.9;
   padding: 20px;
   margin: 1px;
@@ -114,7 +114,7 @@ tooltip label {
   background-color: rgba(60, 56, 54, 0.75);
   font-size: 14px;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 3px;
@@ -133,7 +133,7 @@ window#waybar.empty #window {
   color: #fabd2d;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 3px;
@@ -152,7 +152,7 @@ window#waybar.empty #window {
   color: #fabd2d;
   background-color: #3c3836;
   font-size: 18px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 3px;
@@ -184,9 +184,9 @@ window#waybar.empty #window {
 #cpu {
   color: #ebdbb2;
   background-color: #3c3836;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 14px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 3px;
@@ -195,9 +195,8 @@ window#waybar.empty #window {
 #temperature {
   color: #ebdbb2;
   background-color: #3c3836;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 14px;
-  border-radius: 5px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 3px;
@@ -210,9 +209,8 @@ window#waybar.empty #window {
 #custom-gpu-usage {
   color: #ebdbb2;
   background-color: #3c3836;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 15px;
-  border-radius: 5px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 3px;
@@ -222,9 +220,8 @@ window#waybar.empty #window {
 #memory {
   color: #ebdbb2;
   background-color: #3c3836;
-  border-radius: 5px;
   font-size: 14px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 3px;
@@ -237,9 +234,8 @@ window#waybar.empty #window {
 #language {
   color: #ebdbb2;
   background-color: #3c3836;
-  border-radius: 5px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 3px;
@@ -255,7 +251,7 @@ window#waybar.empty #window {
   font-family: DepartureMono Nerd Font Propo;
   font-size: 14px;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 3px;
@@ -269,7 +265,7 @@ window#waybar.empty #window {
   color: #ebdbb2;
   background-color: #3c3836;
   font-size: 14px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 3px;
@@ -288,7 +284,7 @@ window#waybar.empty #window {
   color: #ebdbb2;
   background-color: #3c3836;
   font-size: 14px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 3px;
@@ -310,7 +306,7 @@ window#waybar.empty #window {
 
 #tray {
   background-color: #3c3836;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 3px;
