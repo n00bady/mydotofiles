@@ -33,7 +33,6 @@
     // Hyprland Window
     "hyprland/window": {
         "separate-outputs": true,
-		"min-length": 40,
 		"max-length": 80,
     },
     
@@ -94,7 +93,7 @@
 		"interval": 5,
         "format": "\ue266 {}% ",
 		"tooltip-format": "RAM: {used}/{total}GiB\nSwap: {swapUsed}/{swapTotal}GiB",
-		"min-length": 6,
+		"min-length": 7,
     },
 
 	// GPU Usage
@@ -102,6 +101,7 @@
 		"format": "󰾲 {}",
 		"exec": "~/.cargo/bin/gpu-usage-waybar --interval 5000",
 		"return-type": "json",
+		"min-length": 10,
 	},
 
 	// CPU Temp
