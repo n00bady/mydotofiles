@@ -19,6 +19,6 @@ fi
 # then it will not show as muted in your waybar module.
 # So toggle them both at the same time
 wpctl set-mute "$Source_ID" toggle && 
-	wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && 
+	# wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle && 
 	notify-send -i audio-input-microphone "Microphone" "Toggle mute on \"$Source_ID. $Device\"."
 
