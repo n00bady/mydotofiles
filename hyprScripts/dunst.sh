@@ -1,8 +1,8 @@
 #!/bin/bash
 
 COUNT="$(dunstctl count waiting)"
-ENABLED=""
-DISABLED=""
+ENABLED=""
+DISABLED=""
 
 DIR="/tmp/dunst_waybar_module"
 STATUS="status.txt"
@@ -14,7 +14,8 @@ else
 fi
 
 if [ "$COUNT" != "0" ]; then
-	DISABLED=" $COUNT"
+	# DISABLED=" $COUNT"
+	DISABLED="$COUNT"
 fi
 
 if dunstctl is-paused | grep -q "false"; then

@@ -131,7 +131,7 @@ window#waybar.empty #window {
 #idle_inhibitor {
   background-color: #3c3836;
   color: #fabd2d;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 10px;
   padding-left: 5px;
@@ -151,7 +151,7 @@ window#waybar.empty #window {
 #custom-dunst {
   color: #fabd2d;
   background-color: #3c3836;
-  font-size: 18px;
+  font-size: 20px;
   border-radius: 10px;
   padding-left: 5px;
   padding-right: 5px;

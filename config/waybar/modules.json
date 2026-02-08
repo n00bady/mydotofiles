@@ -38,7 +38,7 @@
     
     // Power Menu
     "custom/exit": {
-        "format": "",
+        "format": "\uf011",
         "tooltip-format": "Powermenu",
         "on-click": "wlogout -b 4",
         "tooltip": false
@@ -91,17 +91,17 @@
     // Memory
     "memory": {
 		"interval": 5,
-        "format": "\ue266 {}% ",
+        "format": "\ue266 {}%",
 		"tooltip-format": "RAM: {used}/{total}GiB\nSwap: {swapUsed}/{swapTotal}GiB",
-		"min-length": 7,
+		"min-length": 6,
     },
 
 	// GPU Usage
 	"custom/gpu-usage": {
-		"format": "󰾲 {}",
+		"format": "\udb83\udfb2 {}",
 		"exec": "~/.cargo/bin/gpu-usage-waybar --interval 5000",
 		"return-type": "json",
-		"min-length": 10,
+		"min-length": 9,
 	},
 
 	// CPU Temp
@@ -109,7 +109,7 @@
 		"thermal-zone": 0,
 		"hwmon-path-abs": "/sys/devices/pci0000:00/0000:00:18.3/hwmon",
 		"input-filename": "temp1_input",
-		"critical-threshold": 99,
+		"critical-threshold": 95,
 		"format-critical": "\uf2c7 {temperatureC}°C \uf071",
 		"format": "\uf2c9 {temperatureC}°C",
 		"tooltip": false,
@@ -138,9 +138,9 @@
 
 	// Language
     "hyprland/language": {
-        "format": " {short} ",
+        "format": "{short}",
 		"on-click": "hyprctl switchxkblayout current next",
-		"min-length": 3
+		"min-length": 2
     },
     
   // Network
@@ -148,11 +148,11 @@
     "format": "{ifname}",
     "format-wifi": " {essid} ({signalStrength}%)",
     "format-ethernet": " {ifname}",
-    "format-disconnected": "⚠Disconnected⚠",
+    "format-disconnected": "\uf071Disconnected\uf071",
     "tooltip-format": " {ifname} via {gwaddri}",
     "tooltip-format-wifi": " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
-    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
-    "tooltip-format-disconnected": "Disconnected",
+    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\nup: {bandwidthUpBits} down: {bandwidthDownBits}",
+    "tooltip-format-disconnected": "Disconnected!",
     "max-length": 50,
     "on-click": "nm-connection-editor",
 	"on-click-right": "firewall-config",
@@ -177,17 +177,14 @@
 
     // Pulseaudio
     "pulseaudio": {
-        "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": "{icon} {volume}%  {format_source}",
-        "format-bluetooth-muted": "  {icon}  {format_source}",
-        "format-muted": "\uf6a9 {format_source}",
-        "format-source": "",
-        "format-source-muted": "<span color='#cc241d'><b></b></span>",
+        "format": "{icon} {volume}%|{format_source}",
+        "format-bluetooth": "\udb80\udecb \uf294 {volume}%|{format_source}",
+        "format-bluetooth-muted": "\udb81\udfce \uf294|{format_source}",
+        "format-muted": "\ueee8|{format_source}",
+        "format-source": "\uf130",
+        "format-source-muted": "<span color='#cc241d'>\uf131</span>",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "default": ["", "\uf027", " "]
+            "default": ["\uf026", "\uf027", "\uf028"]
         },
         "on-click": "pavucontrol-qt",
 		"min-length": 7,
@@ -218,11 +215,11 @@
         "format": "{icon}",
         "tooltip": false,
         "format-icons":{
-            "activated": "",
-            "deactivated": ""
+			"activated": "\udb86\udeeb",
+			"deactivated": "\udb86\udee0"
         },
         "on-click-right": "hyprlock",
-		"min-length": 3,
+		"min-length": 2,
     },
 
 	// dunst notification
@@ -231,6 +228,6 @@
 		"on-click": "dunstctl set-paused toggle",
 		"restart-interval": 3,
 		"tooltip": false,
-		"min-length": 3,
+		"min-length": 2,
 	}
 }
