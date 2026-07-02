@@ -4,7 +4,7 @@ require "nvchad.options"
 
 local o = vim.o
 
-o.cursorlineopt = 'both' -- to enable cursorline!
+o.cursorlineopt = "both" -- to enable cursorline!
 
 -- use actual tabs
 o.expandtab = false
@@ -14,3 +14,7 @@ o.softtabstop = 4
 
 -- shell
 o.shell = "/usr/bin/fish"
+
+-- other
+o.list = true
+o.listchars = "tab:→ ,trail:⋅,nbsp:◆"
