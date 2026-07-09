@@ -1,0 +1,12 @@
+-- DMS user keybind overrides (edit via Control Center or dms; do not remove this header)
+
+hl.unbind("SUPER + D")
+hl.bind("SUPER + D", hl.dsp.exec_cmd("dms ipc call spotlight-bar toggle"), { description = "dms ipc call spotlight-bar toggle" })
+hl.unbind("SUPER + E")
+hl.bind("SUPER + E", hl.dsp.exec_cmd("pcmanfm-qt"))
+hl.unbind("SUPER + Return")
+hl.bind("SUPER + Return", hl.dsp.exec_cmd("kitty"), { description = "kitty" })
+hl.unbind("ALT + space")
+hl.unbind("SUPER + SHIFT + T")
+hl.unbind("SUPER + T")
+hl.bind("SUPER + T", hl.dsp.window.float({ action = "toggle" }), { description = "Float/unfloat window" })
